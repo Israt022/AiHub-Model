@@ -4,6 +4,7 @@ import Banner from './components/Homepage/Banner/Banner'
 import Footer from './components/Homepage/Footer/Footer'
 import NavBar from './components/Homepage/Navbar/Navbar'
 import Main from './components/Main/Main'
+import { ToastContainer } from 'react-toastify'
 
 const getData = async() =>{
   const res = await fetch('/models.json')
@@ -23,6 +24,9 @@ function App() {
       </Suspense>
 
       <Footer/>
+      <ToastContainer 
+        position="top-center"
+      />
     </>
   )
 }
